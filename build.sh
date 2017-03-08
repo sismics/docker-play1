@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t sismics/play1:1.4.2 .
+docker build -t sismics/play1:java7-play1.2.7 .
