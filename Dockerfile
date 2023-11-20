@@ -1,11 +1,11 @@
 #
 # Dockerfile for Debian + Play Framework
 
-FROM sismics/debian-java:11.0.2
+FROM sismics/debian-java:17.0.9
 MAINTAINER Jean-Marc Tremeaux <jm.tremeaux@sismics.com>
 
 # Download and install Play Framework
-ENV PLAY_VERSION 1.5.3
+ENV PLAY_VERSION 1.7.1
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get -y install python && rm -rf /var/lib/apt/lists/*
 RUN wget -nv -O /opt/play-${PLAY_VERSION}.zip https://nexus.sismics.com/repository/sismics/play-${PLAY_VERSION}.zip \
