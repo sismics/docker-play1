@@ -8,7 +8,7 @@ MAINTAINER Jean-Marc Tremeaux <jm.tremeaux@sismics.com>
 ENV PLAY_VERSION 1.7.1
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get -y install python && rm -rf /var/lib/apt/lists/*
-RUN wget -nv -O /opt/play-${PLAY_VERSION}.zip https://nexus.sismics.com/repository/sismics/play-${PLAY_VERSION}.zip \
+RUN wget -nv -O /opt/play-${PLAY_VERSION}.zip https://github.com/playframework/play1/releases/download/${PLAY_VERSION}/play-${PLAY_VERSION}.zip \
     && cd /opt \
     && unzip /opt/play-${PLAY_VERSION}.zip \
     && chmod +x /opt/play-${PLAY_VERSION}/play \
